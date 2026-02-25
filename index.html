@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prisma X Holi Banner Generator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<div class="banner-wrapper">
+  <div class="banner" id="banner">
+
+    <!-- Banner Background Layer -->
+    <div class="banner-background"></div>
+
+    <!-- PFP Frame -->
+    <div class="pfp-frame" id="pfpFrame">
+      <img id="pfpPreview">
+    </div>
+
+    <!-- Robot -->
+    <img src="robot.png" class="robot">
+
+    <!-- Logo -->
+    <img src="logo.png" class="logo">
+
+  </div>
+</div>
+
+<div class="controls">
+  <input type="file" id="upload" accept="image/*">
+  <button onclick="zoomIn()">Zoom +</button>
+  <button onclick="zoomOut()">Zoom -</button>
+  <button onclick="downloadBanner()">Download Banner</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
