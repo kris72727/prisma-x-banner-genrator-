@@ -1,0 +1,105 @@
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background: linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#000000);
+  background-size:400% 400%;
+  animation:gradientMove 12s ease infinite;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.banner-wrapper{
+  width:90vw;
+  max-width:1500px;
+  aspect-ratio:3/1;
+  position:relative;
+}
+
+.banner{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+/* 🔥 Banner Background */
+.banner-background{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:url("banner-bg.png") center/cover no-repeat;
+  z-index:0;
+}
+
+/* Optional overlay glow */
+.banner-background::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,rgba(255,0,150,0.2),rgba(0,255,255,0.2));
+  mix-blend-mode:overlay;
+}
+
+.pfp-frame{
+  position:absolute;
+  width:20%;
+  aspect-ratio:1/1;
+  left:5%;
+  top:50%;
+  transform:translateY(-50%);
+  overflow:hidden;
+  border-radius:10px;
+  cursor:grab;
+  z-index:2;
+}
+
+.pfp-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1);
+}
+
+.robot{
+  position:absolute;
+  width:12%;
+  top:5%;
+  right:5%;
+  z-index:2;
+}
+
+.logo{
+  position:absolute;
+  width:8%;
+  bottom:5%;
+  right:5%;
+  z-index:2;
+}
+
+.controls{
+  margin-top:20px;
+}
+
+button{
+  padding:10px 15px;
+  margin-left:10px;
+  cursor:pointer;
+  border:none;
+  background:#ff007f;
+  color:white;
+  border-radius:6px;
+}
+button:hover{
+  background:#ff4da6;
+}
